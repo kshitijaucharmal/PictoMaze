@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &369110756534752617
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2769704927101900867}
+  - component: {fileID: 1705870803531860788}
+  m_Layer: 0
+  m_Name: MazeGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2769704927101900867
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 369110756534752617}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.986398, y: -3.8808985, z: -12.267496}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1705870803531860788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 369110756534752617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7f6713018f5aec4c8bd7960f648f998, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  width: 16
+  depth: 16
+  mazeCellPrefab: {fileID: 2614353099489028839, guid: a2b685e2375fb6645b599fbb01f01139, type: 3}
+  lavaPhysicsMaterial: {fileID: 13400000, guid: 0ca2a1954a2acb846a72f2dd85cfb584, type: 2}
+  icePhysicsMaterial: {fileID: 13400000, guid: eac04dc083acce3488835fe9b0810207, type: 2}
+  iceWallsMaterial: {fileID: 2100000, guid: 7619e99f9847ab84e956d133ebdafe36, type: 2}
+  lavaWallsMaterial: {fileID: 2100000, guid: 3a9e5f24335ddb542a365937fdd66b22, type: 2}
+  templatePlane: {fileID: 4815099043372628232, guid: 69760bf9b4f00f64787a08911ec78fa8, type: 3}
