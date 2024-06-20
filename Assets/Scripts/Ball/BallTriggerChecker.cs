@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class BallTriggerChecker : MonoBehaviour
 {
@@ -15,7 +11,12 @@ public class BallTriggerChecker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // if(Input.GetKeyDown(KeyCode.W)){
+        //     GameManager.Instance.WinLoseGame(true);
+        // }
+        // if(Input.GetKeyDown(KeyCode.L)){
+        //     GameManager.Instance.WinLoseGame(false);
+        // }
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -28,16 +29,16 @@ public class BallTriggerChecker : MonoBehaviour
             other.transform.GetChild(0).GetComponent<IPowerup>().Collect();
         }
         if(other.gameObject.tag == "DieTrigger") {
-            Debug.Log("Dead");
             // EditorApplication.isPlaying = false;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            GameManager.Instance.WinLoseGame(false);
         }
 
         if (other.gameObject.tag == "WonTrigger")
         {
-            Debug.Log("Won");
             // EditorApplication.isPlaying = false;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            GameManager.Instance.WinLoseGame(true);
         }
     }
 }

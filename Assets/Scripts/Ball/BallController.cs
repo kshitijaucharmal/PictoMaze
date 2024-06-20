@@ -84,7 +84,7 @@ public class BallController : MonoBehaviour
     {
         if(isFloating) { yield break; } 
         isFloating = true;
-        transform.position = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
+        transform.position = new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z);
         // transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
         rb.useGravity = false;
         yield return new WaitForSeconds(2f);
